@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MediCore — Hospital Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+</head>
+<body>
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <div class="landing-hero">
+            <div class="landing-logo">
+                <div class="landing-logo-icon"><i class="ti ti-heartbeat"></i></div>
+                <div class="landing-logo-text">
+                    <strong>MediCore</strong>
+                    <span>Hospital Management System</span>
+                </div>
+            </div>
+            <h1 class="landing-tagline">Smarter Care.<br>Better Outcomes.</h1>
+            <p class="landing-sub">MediCore is a complete hospital management platform — from patient admission to staff management, ward allocation, appointments, pharmacy, and analytics. All in one place.</p>
+            
+            <div class="landing-stats">
+                <div class="landing-stat"><strong>2,400+</strong><span>Patients Managed</span></div>
+                <div class="landing-stat"><strong>60</strong><span>Hospital Rooms</span></div>
+                <div class="landing-stat"><strong>18</strong><span>Specialist Doctors</span></div>
+                <div class="landing-stat"><strong>94%</strong><span>Patient Satisfaction</span></div>
+            </div>
+
+            <div class="landing-scroll-hint">
+                <span>Scroll down to learn more & login</span>
+                <i class="ti ti-chevron-down"></i>
+            </div>
+        </div>
+
+        <div class="landing-doctors">
+            <h2>Meet Our Specialists</h2>
+            <div class="doc-grid">
+                <div class="doc-card"><div class="doc-avatar">SK</div><h3>Dr. Sarah Kim</h3><p>Cardiologist<br>12 yrs experience · 840 cases<br><span class="pill pill-green" style="margin-top:8px">On Duty</span></div>
+                <div class="doc-card"><div class="doc-avatar">MT</div><h3>Dr. Mark Torres</h3><p>Neurologist<br>9 yrs experience · 610 cases<br><span class="pill pill-green" style="margin-top:8px">On Duty</span></div>
+                <div class="doc-card"><div class="doc-avatar">EZ</div><h3>Dr. Emily Zhao</h3><p>Surgeon<br>15 yrs experience · 1,200 cases<br><span class="pill pill-purple" style="margin-top:8px">In OR</span></div>
+                <div class="doc-card"><div class="doc-avatar">AP</div><h3>Dr. Aisha Patel</h3><p>Oncologist<br>11 yrs experience · 720 cases<br><span class="pill pill-green" style="margin-top:8px">On Duty</span></div>
+                <div class="doc-card"><div class="doc-avatar">MC</div><h3>Dr. Michael Chen</h3><p>ER Physician<br>8 yrs experience · 2,100 cases<br><span class="pill pill-green" style="margin-top:8px">On Duty</span></div>
+                <div class="doc-card"><div class="doc-avatar">JP</div><h3>Dr. James Porter</h3><p>Neurologist<br>6 yrs experience · 390 cases<br><span class="pill pill-amber" style="margin-top:8px">On Leave</span></div>
+            </div>
+        </div>
+
+        <div class="landing-features">
+            <h2>Everything Your Hospital Needs</h2>
+            <div class="feat-grid">
+                <div class="feat-card"><div class="feat-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="ti ti-user-plus"></i></div><h3>Patient Admission</h3><p style="color:var(--text-muted);font-size:13px;margin-top:8px">Full patient profiles with CNIC, guardian info, medical history, and priority triage.</p></div>
+                <div class="feat-card"><div class="feat-icon" style="background:var(--blue-dim);color:var(--blue)"><i class="ti ti-calendar-event"></i></div><h3>Appointment Scheduling</h3><p style="color:var(--text-muted);font-size:13px;margin-top:8px">Book, view, and manage appointments with any doctor. Real-time schedule board.</p></div>
+                <div class="feat-card"><div class="feat-icon" style="background:var(--purple-dim);color:var(--purple)"><i class="ti ti-building-hospital"></i></div><h3>Ward Management</h3><p style="color:var(--text-muted);font-size:13px;margin-top:8px">Visual room grid across all floors. Track availability and patient assignments live.</p></div>
+                <div class="feat-card"><div class="feat-icon" style="background:var(--green-dim);color:var(--green)"><i class="ti ti-users"></i></div><h3>Staff Directory</h3><p style="color:var(--text-muted);font-size:13px;margin-top:8px">Complete doctor and staff profiles with degrees, specialties, and case counts.</p></div>
+                <div class="feat-card"><div class="feat-icon" style="background:var(--amber-dim);color:var(--amber)"><i class="ti ti-message-circle"></i></div><h3>Messaging & Alerts</h3><p style="color:var(--text-muted);font-size:13px;margin-top:8px">Receive messages from patient guardians and stay on top of critical alerts.</p></div>
+                <div class="feat-card"><div class="feat-icon" style="background:var(--red-dim);color:var(--red)"><i class="ti ti-chart-bar"></i></div><h3>Analytics & Reports</h3><p style="color:var(--text-muted);font-size:13px;margin-top:8px">Admission trends, department load, billing, and more — powered by live data.</p></div>
+            </div>
+        </div>
+
+        <div class="landing-auth" id="authSection">
+            <div class="auth-box">
+                <h2>Access MediCore</h2>
+                <p>Sign in to your account or create a new one to get started.</p>
+                
+                <div class="auth-tab">
+                    <button class="auth-tab-btn active" onclick="switchAuthTab('login')">Sign In</button>
+                    <button class="auth-tab-btn" onclick="switchAuthTab('register')">Create Account</button>
+                    <button class="auth-tab-btn" onclick="switchAuthTab('forgot')">Forgot Password</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="authLogin" class="auth-form active">
+                    <div class="form-group" style="margin-bottom:14px">
+                        <label class="form-label">User ID</label>
+                        <input type="text" id="loginId" class="form-input" placeholder="Enter your User ID" autocomplete="off">
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px">
+                        <label class="form-label">Password</label>
+                        <input type="password" id="loginPwd" class="form-input" placeholder="Enter your password" autocomplete="off">
+                    </div>
+                    <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doLogin()">Sign In</button>
+                    <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--text-muted)">Don't have an account? <a href="#" onclick="switchAuthTab('register');return false;" style="color:var(--teal)">Create one</a></p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="authRegister" class="auth-form">
+                    <div class="form-grid cols-2" style="margin-bottom:14px">
+                        <div class="form-group"><label class="form-label">User ID *</label><input type="text" id="regId" class="form-input" autocomplete="off"></div>
+                        <div class="form-group"><label class="form-label">Full Name *</label><input type="text" id="regName" class="form-input" autocomplete="off"></div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:14px">
+                        <label class="form-label">Role</label>
+                        <select id="regRole" class="form-input" autocomplete="off"><option>Administrator</option><option>Doctor</option><option>Nurse</option><option>Pharmacist</option><option>Receptionist</option></select>
+                    </div>
+                    <div class="form-grid cols-2" style="margin-bottom:14px">
+                        <div class="form-group"><label class="form-label">Password *</label><input type="password" id="regPwd" class="form-input" autocomplete="off"></div>
+                        <div class="form-group"><label class="form-label">Confirm Password *</label><input type="password" id="regPwd2" class="form-input" autocomplete="off"></div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:14px">
+                        <label class="form-label">Security Question *</label>
+                        <input type="text" id="regQ" class="form-input" placeholder="e.g., What is your mother's maiden name?" autocomplete="off">
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px">
+                        <label class="form-label">Security Answer *</label>
+                        <input type="text" id="regA" class="form-input" placeholder="Your answer" autocomplete="off">
+                    </div>
+                    <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doRegister()">Create Account</button>
+                </div>
+
+                <!-- Forgot Password Form -->
+                <div id="authForgot" class="auth-form">
+                    <div id="forgotStep1">
+                        <div class="form-group" style="margin-bottom:20px">
+                            <label class="form-label">User ID</label>
+                            <input type="text" id="forgotId" class="form-input" placeholder="Enter your User ID" autocomplete="off">
+                        </div>
+                        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doForgotStep1()">Find My Account</button>
+                    </div>
+                    <div id="forgotStep2" style="display:none">
+                        <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px">Security Question:</p>
+                        <p id="forgotQDisplay" style="font-weight:600;margin-bottom:14px">—</p>
+                        <div class="form-group" style="margin-bottom:20px">
+                            <label class="form-label">Your Answer</label>
+                            <input type="text" id="forgotAns" class="form-input" placeholder="Enter your answer" autocomplete="off">
+                        </div>
+                        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doForgotStep2()">Verify Answer</button>
+                    </div>
+                    <div id="forgotStep3" style="display:none">
+                        <div class="form-grid cols-2" style="margin-bottom:20px">
+                            <div class="form-group"><label class="form-label">New Password</label><input type="password" id="forgotNewPwd" class="form-input" autocomplete="off"></div>
+                            <div class="form-group"><label class="form-label">Confirm New Password</label><input type="password" id="forgotNewPwd2" class="form-input" autocomplete="off"></div>
+                        </div>
+                        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doForgotStep3()">Save New Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer style="text-align:center;padding:40px 24px;color:var(--text-muted);font-size:13px;border-top:1px solid var(--border)">
+            © 2026 MediCore Hospital Management System · All rights reserved
+        </footer>
+    </div>
+
+    <!-- Greeting Screen -->
+    <div id="greetingScreen" class="hidden">
+        <div class="greeting-icon"><i class="ti ti-activity"></i></div>
+        <h1 id="greetingMsg" class="greeting-time">Welcome Back</h1>
+        <p id="greetingUserName" class="greeting-name">Welcome back to MediCore</p>
+        <p id="greetingDate" class="greeting-name" style="font-size:14px;margin-top:-32px"></p>
+        <button id="greetingEnterBtn" class="btn btn-primary greeting-btn" onclick="enterApp()" style="margin-top:32px;padding:14px 32px;font-size:16px">Enter System</button>
+        <p id="greetingTimer" class="greeting-timer">Button available in 5s…</p>
+    </div>
+
+    <!-- Main App Shell -->
+    <div id="appShell">
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon"><i class="ti ti-heartbeat"></i></div>
+                <div class="logo-text"><strong>MediCore</strong><span>Hospital Mgmt.</span></div>
+            </div>
+            <div style="flex:1;overflow-y:auto;padding-top:8px">
+                <div class="sidebar-section-label">Main</div>
+                <div class="nav-item active" onclick="showPage('dashboard', this)"><i class="ti ti-layout-dashboard"></i> Dashboard</div>
+                <div class="nav-item" onclick="showPage('admit', this)"><i class="ti ti-user-plus"></i> Admit Patient</div>
+                <div class="nav-item" onclick="showPage('patients', this)"><i class="ti ti-users"></i> Patient Records <span id="patientCountBadge" class="badge">0</span></div>
+                <div class="nav-item" onclick="showPage('wards', this)"><i class="ti ti-building-hospital"></i> Ward Management</div>
+                <div class="nav-item" onclick="showPage('schedule', this)"><i class="ti ti-calendar-event"></i> Clinical Appointments <span id="apptBadge" class="badge badge-info">0</span></div>
+                <div class="sidebar-section-label">Management</div>
+                <div class="nav-item" onclick="showPage('staff', this)"><i class="ti ti-user-shield"></i> Staff Directory</div>
+                <div class="nav-item" onclick="showPage('addstaff', this)"><i class="ti ti-user-plus"></i> Add Staff</div>
+                <div class="nav-item" onclick="showPage('pharmacy', this)"><i class="ti ti-pills"></i> Pharmacy</div>
+                <div class="nav-item" onclick="showPage('analytics', this)"><i class="ti ti-chart-bar"></i> Reports & Analytics</div>
+                <div class="nav-item" onclick="showPage('billing', this)"><i class="ti ti-receipt"></i> Billing</div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-card" onclick="showPage('settings', this)">
+                    <div class="user-avatar" id="sidebarAvatar">DR</div>
+                    <div class="user-info">
+                        <strong id="sidebarName">User</strong>
+                        <span id="sidebarRole">Administrator</span>
+                    </div>
+                    <i class="ti ti-settings"></i>
+                </div>
+                <button class="btn btn-secondary btn-sm" style="width:100%;justify-content:center;margin-top:12px" onclick="doLogout()">
+                    <i class="ti ti-logout"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <button class="hamburger" onclick="toggleSidebar()"><i class="ti ti-menu-2"></i></button>
+                <div class="topbar-title-wrap">
+                    <div class="topbar-title" id="topbarTitle">Dashboard</div>
+                    <div class="topbar-sub" id="topbarDate"></div>
+                </div>
+                <div class="topbar-search">
+                    <i class="ti ti-search"></i>
+                    <input type="text" id="globalSearch" placeholder="Search patients, staff, or records..." onkeyup="if(event.key==='Enter')handleGlobalSearch()">
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn">
+                        <i class="ti ti-moon"></i>
+                        <i class="ti ti-sun"></i>
+                        <span class="theme-label theme-label-dark">Dark</span>
+                        <span class="theme-label theme-label-light">Light</span>
+                    </button>
+                    <button class="icon-btn" onclick="toggleAlerts()">
+                        <i class="ti ti-bell"></i>
+                        <span class="icon-btn-label">Alerts</span>
+                        <span class="dot"></span>
+                    </button>
+                    <button class="icon-btn" onclick="toggleMessages()">
+                        <i class="ti ti-message-circle"></i>
+                        <span class="icon-btn-label">Messages</span>
+                        <span id="msgDot" class="dot" style="display:none"></span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Pages (Dashboard, Admit, Patients, Wards, Schedule, Staff, Add Staff, Pharmacy, Analytics, Billing, Settings) -->
+            <!-- Kept identical to previous version for brevity, no changes needed here -->
+            <div id="page-dashboard" class="page active">
+                <div class="stats-grid">
+                    <div class="stat-card teal"><div class="stat-header"><span class="stat-label">Total Patients</span><div class="stat-icon-wrap"><i class="ti ti-users"></i></div></div><div class="stat-value" id="dash-total">0</div><div class="stat-trend trend-up">↑ 12% vs last month</div></div>
+                    <div class="stat-card blue"><div class="stat-header"><span class="stat-label">Admitted Today</span><div class="stat-icon-wrap"><i class="ti ti-user-plus"></i></div></div><div class="stat-value" id="dash-today">0</div><div class="stat-trend trend-up">↑ 4 from yesterday</div></div>
+                    <div class="stat-card amber"><div class="stat-header"><span class="stat-label">Rooms Occupied</span><div class="stat-icon-wrap"><i class="ti ti-building-hospital"></i></div></div><div class="stat-value" id="dash-rooms">24</div><div class="stat-trend">of 60 total rooms</div></div>
+                    <div class="stat-card purple"><div class="stat-header"><span class="stat-label">Appointments</span><div class="stat-icon-wrap"><i class="ti ti-calendar-event"></i></div></div><div class="stat-value" id="dash-appts">0</div><div class="stat-trend">scheduled total</div></div>
+                </div>
+                <div class="col-2-3">
+                    <div class="glass-card">
+                        <div class="section-header"><div><div class="section-title">Recent Activity</div><div class="section-subtitle">Live patient events</div></div></div>
+                        <div class="activity-item"><div class="activity-dot" style="background:var(--green-dim);color:var(--green)"><i class="ti ti-user-plus"></i></div><div class="activity-content"><p>New patient admitted — Ward B, Room 215</p><span>2 minutes ago · Dr. Sarah Kim</span></div></div>
+                        <div class="activity-item"><div class="activity-dot" style="background:var(--blue-dim);color:var(--blue)"><i class="ti ti-user-check"></i></div><div class="activity-content"><p>Patient discharged — Room 108</p><span>14 minutes ago · Dr. Mark Torres</span></div></div>
+                        <div class="activity-item"><div class="activity-dot" style="background:var(--amber-dim);color:var(--amber)"><i class="ti ti-flask"></i></div><div class="activity-content"><p>Lab results pending — Patient #00489</p><span>31 minutes ago · Pathology Dept.</span></div></div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="section-header"><div><div class="section-title">Department Load</div></div></div>
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><span>Emergency</span><span>87%</span></div><div class="prog-bar"><div class="prog-fill" style="width:87%;background:var(--red)"></div></div></div>
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><span>Cardiology</span><span>65%</span></div><div class="prog-bar"><div class="prog-fill" style="width:65%;background:var(--teal)"></div></div></div>
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><span>Neurology</span><span>42%</span></div><div class="prog-bar"><div class="prog-fill" style="width:42%;background:var(--blue)"></div></div></div>
+                        <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><span>Oncology</span><span>58%</span></div><div class="prog-bar"><div class="prog-fill" style="width:58%;background:var(--purple)"></div></div></div>
+                    </div>
+                </div>
+                <div class="glass-card" style="margin-top:20px">
+                    <div class="section-header"><div><div class="section-title">Recent Patients</div><div class="section-subtitle">Latest admitted patients</div></div><button class="btn btn-secondary btn-sm" onclick="showPage('patients',null)">View All</button></div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Patient</th><th>ID</th><th>Ward / Room</th><th>Admitted</th><th>Status</th><th>Doctor</th><th>Action</th></tr></thead>
+                            <tbody id="dashRecentTable"><tr><td colspan="7"><div class="empty-state"><i class="ti ti-users"></i><p>No patients admitted yet.</p></div></td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- (Other pages remain exactly as they were in the previous version) -->
+            <div id="page-admit" class="page"><div class="glass-card page-form-wrap">
+<form id="admitForm" novalidate>
+<div class="section-header"><div><div class="section-title">Admit New Patient</div><div class="section-subtitle">Fill all required fields (*) to create a patient record</div></div></div><div class="divider"></div><div class="section-divider-label"><i class="ti ti-shield-lock"></i> Secure Entry</div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">First Name *</label><input type="text" id="f-fname" class="form-input"></div><div class="form-group"><label class="form-label">Last Name *</label><input type="text" id="f-lname" class="form-input"></div><div class="form-group"><label class="form-label">Date of Birth</label><input type="date" id="f-dob" class="form-input"></div></div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Gender</label><select id="f-gender" class="form-input"><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Blood Type</label><select id="f-blood" class="form-input"><option value="">Select</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div><div class="form-group"><label class="form-label">Patient CNIC *</label><input type="text" id="f-cnic" class="form-input" placeholder="xxxxx-xxxxxxx-x"></div></div><div class="divider"></div><div class="section-divider-label"><i class="ti ti-user-heart"></i> Guardian / Attendant Information</div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Guardian Full Name *</label><input type="text" id="f-guardian" class="form-input">
+<div class="form-group"><label class="form-label">Emergency Contact Name</label><input type="text" id="f-ecname" class="form-input"></div>
+<div class="form-group"><label class="form-label">Emergency Contact Phone</label><input type="text" id="f-ecphone" class="form-input"></div>
+</div><div class="form-group"><label class="form-label">Relationship to Patient</label><select id="f-grel" class="form-input"><option value="">Select</option><option>Father</option><option>Mother</option><option>Spouse</option><option>Sibling</option><option>Son/Daughter</option><option>Friend</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Guardian CNIC *</label><input type="text" id="f-gcnic" class="form-input"></div></div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Guardian Phone *</label><input type="text" id="f-gphone" class="form-input"></div><div class="form-group"><label class="form-label">Guardian Email</label><input type="email" id="f-gemail" class="form-input"></div><div class="form-group"><label class="form-label">Guardian Address</label><input type="text" id="f-gaddress" class="form-input"></div></div><div class="divider"></div><div class="section-divider-label"><i class="ti ti-building-hospital"></i> Admission Details</div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Ward *</label><select id="f-ward" class="form-input"><option value="">Select Ward</option><option>Emergency</option><option>Cardiology</option><option>Neurology</option><option>Oncology</option><option>Orthopedics</option><option>Pediatrics</option><option>ICU</option><option>Surgery</option><option>General</option></select></div><div class="form-group"><label class="form-label">Room Number *</label><input type="text" id="f-room" class="form-input"></div><div class="form-group"><label class="form-label">Attending Doctor</label><select id="f-doctor" class="form-input"><option value="">Assign Doctor</option><option>Dr. Sarah Kim</option><option>Dr. Mark Torres</option><option>Dr. Emily Zhao</option><option>Dr. James Porter</option><option>Dr. Aisha Patel</option><option>Dr. Michael Chen</option></select></div></div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Priority Level</label><select id="f-priority" class="form-input"><option>Stable</option><option>Moderate</option><option>Critical</option><option>Emergency</option></select></div><div class="form-group"><label class="form-label">Insurance / Payer</label><input type="text" id="f-insurance" class="form-input"></div><div class="form-group"><label class="form-label">Patient Phone</label><input type="text" id="f-phone" class="form-input">
+<div class="form-group"><label class="form-label">Patient Email</label><input type="email" id="f-email" class="form-input" placeholder="example@domain.tld"></div>
+<div class="form-group"><label class="form-label">Patient Address</label><input type="text" id="f-address" class="form-input" placeholder="Street, City"></div>
+</div></div><div class="form-group" style="margin-bottom:20px"><label class="form-label">Reason for Admission *</label><textarea id="f-reason" class="form-input" rows="3"></textarea></div><div class="form-group" style="margin-bottom:24px"><label class="form-label">Current Medications / Allergies</label><textarea id="f-meds" class="form-input" rows="2"></textarea></div><div style="display:flex;gap:12px;justify-content:flex-end"><button class="btn btn-secondary" id="admitClearBtn" type="button" onclick="clearAdmitForm()">Clear</button><button class="btn btn-primary" type="submit" id="admitSubmitBtn"><i class="ti ti-check"></i> Admit Patient</button></div></div></div>
+            
+</form>
+<div id="page-patients" class="page"><div class="glass-card"><div class="section-header"><div><div class="section-title">All Patient Records</div></div><button class="btn btn-primary btn-sm" onclick="showPage('admit',null)"><i class="ti ti-plus"></i> Admit Patient</button></div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><input type="text" id="patSearch" class="form-input" placeholder="Search by name, ID, or CNIC..." oninput="renderPatientsTable()"></div><div class="form-group"><select id="patFilterWard" class="form-input" onchange="renderPatientsTable()"><option value="">All Wards</option><option>Emergency</option><option>Cardiology</option><option>Neurology</option><option>Oncology</option><option>Orthopedics</option><option>Pediatrics</option><option>ICU</option><option>Surgery</option><option>General</option></select></div><div class="form-group"><select id="patFilterStatus" class="form-input" onchange="renderPatientsTable()"><option value="">All Statuses</option><option>Stable</option><option>Moderate</option><option>Critical</option><option>Emergency</option></select></div></div><p id="patCountLabel" style="font-size:13px;color:var(--text-muted);margin-bottom:12px">Loading…</p><div class="table-wrap"><table><thead><tr><th>Patient</th><th>ID</th><th>CNIC</th><th>Ward</th><th>Room</th><th>Doctor</th><th>Priority</th><th>Admitted</th><th>Actions</th></tr></thead><tbody id="patientTable"><tr><td colspan="9"><div class="empty-state"><i class="ti ti-users"></i><p>No patients found.</p></div></td></tr></tbody></table></div></div></div>
+            <div id="page-wards" class="page"><div class="stats-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px"><div class="stat-card green"><div class="stat-header"><span class="stat-label">Available</span></div><div class="stat-value" id="wardAvailable">36</div><div class="stat-trend">rooms ready</div></div><div class="stat-card red"><div class="stat-header"><span class="stat-label">Occupied</span></div><div class="stat-value" id="wardOccupied">0</div><div class="stat-trend">rooms in use</div></div><div class="stat-card amber"><div class="stat-header"><span class="stat-label">Maintenance</span></div><div class="stat-value">4</div><div class="stat-trend">under service</div></div></div><div class="glass-card"><div class="section-header"><div class="section-title">Room Grid — Floor 1–3</div><div style="display:flex;gap:16px;font-size:12px;color:var(--text-muted)"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:3px;background:var(--green-dim);border:1px solid var(--green)"></span> Available</span><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:3px;background:var(--red-dim);border:1px solid var(--red)"></span> Occupied</span><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:3px;background:var(--amber-dim);border:1px solid var(--amber)"></span> Maintenance</span></div></div><div class="ward-grid" id="wardGrid"></div></div></div>
+            <div id="page-schedule" class="page"><div class="col-2-3"><div class="glass-card"><div class="section-header"><div class="section-title">All Scheduled Appointments</div></div><div id="apptList"><div class="empty-state"><i class="ti ti-calendar-off"></i><p>No appointments scheduled yet.</p></div></div></div><div class="glass-card"><div class="section-header"><div class="section-title">New</div></div><div class="form-group" style="margin-bottom:14px"><label class="form-label">Patient Name</label><input type="text" id="apptPatient" class="form-input"></div><div class="form-group" style="margin-bottom:14px"><label class="form-label">Doctor</label><select id="apptDoctor" class="form-input"><option>Dr. Sarah Kim</option><option>Dr. Mark Torres</option><option>Dr. Emily Zhao</option><option>Dr. James Porter</option><option>Dr. Aisha Patel</option><option>Dr. Michael Chen</option></select></div><div class="form-grid cols-2" style="margin-bottom:14px"><div class="form-group"><label class="form-label">Date</label><input type="date" id="apptDate" class="form-input"></div><div class="form-group"><label class="form-label">Time</label><input type="time" id="apptTime" class="form-input"></div></div><div class="form-group" style="margin-bottom:20px"><label class="form-label">Type</label><select id="apptType" class="form-input"><option>Consultation</option><option>Surgery</option><option>Follow-up</option><option>Lab Review</option><option>Emergency</option></select></div><button class="btn btn-primary" style="width:100%;justify-content:center" onclick="scheduleAppointment()">Schedule Appointment</button></div></div></div>
+            <div id="page-staff" class="page"><div class="section-header"><div><div class="section-title">Staff Directory</div></div><button class="btn btn-primary btn-sm" onclick="showPage('addstaff',null)"><i class="ti ti-plus"></i> Add Staff</button></div><div class="form-grid cols-2" style="margin-bottom:20px"><div class="form-group"><input type="text" id="staffSearch" class="form-input" placeholder="Search by name, role, or department..." oninput="renderStaff()"></div><div class="form-group"><select id="staffDeptFilter" class="form-input" onchange="renderStaff()"><option value="">All Departments</option><option>Cardiology</option><option>Neurology</option><option>Surgery</option><option>Emergency</option><option>Oncology</option><option>Pharmacy</option><option>ICU</option><option>General</option></select></div></div><div class="doc-grid" id="staffGrid" style="grid-template-columns:repeat(auto-fill, minmax(280px, 1fr))"></div></div>
+            <div id="page-addstaff" class="page"><div class="glass-card page-form-wrap"><div class="section-header"><div><div class="section-title">Add New Staff Member</div><div class="section-subtitle">Doctor, Nurse, or any hospital staff</div></div></div><div class="divider"></div><div class="section-divider-label"><i class="ti ti-user"></i> Personal Information</div><div class="form-grid cols-2" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Full Name *</label><input type="text" id="s-name" class="form-input"></div><div class="form-group"><label class="form-label">Father's Name</label><input type="text" id="s-fname" class="form-input"></div></div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">CNIC</label><input type="text" id="s-cnic" class="form-input"></div><div class="form-group"><label class="form-label">Phone</label><input type="text" id="s-phone" class="form-input"></div><div class="form-group"><label class="form-label">Email</label><input type="email" id="s-email" class="form-input"></div></div><div class="divider"></div><div class="section-divider-label"><i class="ti ti-briefcase"></i> Professional Information</div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Role / Title *</label><select id="s-role" class="form-input"><option value="">Select Role</option><option>Doctor</option><option>Surgeon</option><option>Specialist</option><option>Nurse</option><option>Head Nurse</option><option>Pharmacist</option><option>Lab Technician</option><option>Receptionist</option><option>Admin</option></select></div><div class="form-group"><label class="form-label">Department *</label><select id="s-dept" class="form-input"><option value="">Select Dept.</option><option>Emergency</option><option>Cardiology</option><option>Neurology</option><option>Oncology</option><option>Surgery</option><option>Orthopedics</option><option>Pediatrics</option><option>ICU</option><option>Pharmacy</option><option>General Administration</option></select></div><div class="form-group"><label class="form-label">Degree / Qualification *</label><select id="s-degree" class="form-input" onchange="document.getElementById('s-degreeOther').style.display=this.value==='Other'?'block':'none'"><option value="">Select Degree</option><option>MBBS</option><option>FCPS</option><option>MRCP</option><option>MS</option><option>MD</option><option>PhD</option><option>BSN (Nursing)</option><option>D.Pharm</option><option>Diploma</option><option>Other</option></select><input type="text" id="s-degreeOther" class="form-input" placeholder="Specify Degree" style="display:none;margin-top:8px"></div></div><div class="form-grid cols-3" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Pass-Out Year</label><input type="number" id="s-passout" class="form-input"></div><div class="form-group"><label class="form-label">Specialization</label><input type="text" id="s-spec" class="form-input"></div><div class="form-group"><label class="form-label">Years of Experience</label><input type="number" id="s-exp" class="form-input"></div></div><div class="form-grid cols-2" style="margin-bottom:20px"><div class="form-group"><label class="form-label">Consultation Fee (PKR)</label><input type="number" id="s-fee" class="form-input"></div><div class="form-group"><label class="form-label">Total Cases Handled</label><input type="number" id="s-cases" class="form-input"></div></div><div class="form-group" style="margin-bottom:24px"><label class="form-label">About / Biography</label><textarea id="s-bio" class="form-input" rows="3"></textarea></div><div style="display:flex;gap:12px;justify-content:flex-end"><button class="btn btn-secondary" onclick="clearStaffForm()">Clear</button><button class="btn btn-primary" onclick="addStaff()"><i class="ti ti-plus"></i> Add Staff Member</button></div></div></div>
+            <div id="page-pharmacy" class="page"><div class="stats-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px"><div class="stat-card teal"><div class="stat-header"><span class="stat-label">Total Medications</span></div><div class="stat-value">1,248</div><div class="stat-trend">in inventory</div></div><div class="stat-card amber"><div class="stat-header"><span class="stat-label">Low Stock</span></div><div class="stat-value">14</div><div class="stat-trend">items need reorder</div></div><div class="stat-card green"><div class="stat-header"><span class="stat-label">Dispensed Today</span></div><div class="stat-value">87</div><div class="stat-trend">prescriptions</div></div></div><div class="glass-card"><div class="section-header"><div class="section-title">Medication Inventory</div></div><div class="table-wrap"><table><thead><tr><th>Medication</th><th>Category</th><th>Stock</th><th>Unit</th><th>Status</th><th>Reorder Level</th></tr></thead><tbody><tr><td>Amoxicillin 500mg</td><td>Antibiotic</td><td>840</td><td>Capsules</td><td><span class="pill pill-green">In Stock</span></td><td>200</td></tr><tr><td>Metformin 1000mg</td><td>Antidiabetic</td><td>320</td><td>Tablets</td><td><span class="pill pill-green">In Stock</span></td><td>100</td></tr><tr><td>Lisinopril 10mg</td><td>Antihypertensive</td><td>45</td><td>Tablets</td><td><span class="pill pill-amber">Low Stock</span></td><td>150</td></tr><tr><td>Morphine 10mg/ml</td><td>Analgesic</td><td>12</td><td>Vials</td><td><span class="pill pill-red">Critical</span></td><td>50</td></tr><tr><td>Ceftriaxone 1g</td><td>Antibiotic</td><td>200</td><td>Vials</td><td><span class="pill pill-green">In Stock</span></td><td>80</td></tr><tr><td>Insulin Glargine</td><td>Hormone</td><td>78</td><td>Pens</td><td><span class="pill pill-amber">Low Stock</span></td><td>120</td></tr></tbody></table></div></div></div>
+            <div id="page-analytics" class="page"><div class="stats-grid" style="margin-bottom:24px"><div class="stat-card blue"><div class="stat-header"><span class="stat-label">Avg. Stay (days)</span></div><div class="stat-value">4.7</div><div class="stat-trend trend-dn">↓ 0.3 vs last month</div></div><div class="stat-card red"><div class="stat-header"><span class="stat-label">Readmission Rate</span></div><div class="stat-value">8.2%</div><div class="stat-trend trend-dn">↑ 1.1% needs review</div></div><div class="stat-card green"><div class="stat-header"><span class="stat-label">Patient Satisfaction</span></div><div class="stat-value">94%</div><div class="stat-trend trend-up">↑ 2% this quarter</div></div><div class="stat-card purple"><div class="stat-header"><span class="stat-label">Bed Turnover</span></div><div class="stat-value">3.1x</div><div class="stat-trend">per week</div></div></div><div class="col-2-3"><div class="glass-card"><div class="section-header"><div class="section-title">Monthly Admissions</div></div><canvas id="admissionsChart" height="120"></canvas></div><div class="glass-card"><div class="section-header"><div class="section-title">Department Distribution</div></div><canvas id="deptChart" height="200"></canvas></div></div></div>
+            <div id="page-billing" class="page"><div class="stats-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px"><div class="stat-card green"><div class="stat-header"><span class="stat-label">Revenue (MTD)</span></div><div class="stat-value">$1.8M</div><div class="stat-trend trend-up">↑ 7% vs prior month</div></div><div class="stat-card amber"><div class="stat-header"><span class="stat-label">Pending Invoices</span></div><div class="stat-value">42</div><div class="stat-trend">awaiting payment</div></div><div class="stat-card red"><div class="stat-header"><span class="stat-label">Overdue</span></div><div class="stat-value">8</div><div class="stat-trend">require follow-up</div></div></div><div class="glass-card"><div class="section-header"><div class="section-title">Recent Billing Records</div></div><div class="table-wrap"><table><thead><tr><th>Patient</th><th>Invoice #</th><th>Date</th><th>Amount</th><th>Insurance</th><th>Status</th></tr></thead><tbody><tr><td>James Wilson</td><td>INV-20491</td><td>Jun 12, 2026</td><td>$4,850</td><td>Blue Cross</td><td><span class="pill pill-green">Paid</span></td></tr><tr><td>Maria Garcia</td><td>INV-20488</td><td>Jun 11, 2026</td><td>$12,400</td><td>Aetna</td><td><span class="pill pill-amber">Pending</span></td></tr><tr><td>Robert Lee</td><td>INV-20475</td><td>Jun 8, 2026</td><td>$980</td><td>Medicare</td><td><span class="pill pill-green">Paid</span></td></tr><tr><td>Chen Wei</td><td>INV-20461</td><td>Jun 5, 2026</td><td>$6,300</td><td>United Health</td><td><span class="pill pill-red">Overdue</span></td></tr></tbody></table></div></div></div>
+            <div id="page-settings" class="page"><div class="two-col"><div class="glass-card"><div class="section-header"><div class="section-title">Hospital Profile</div></div><div class="form-group" style="margin-bottom:14px"><label class="form-label">Hospital Name</label><input type="text" class="form-input" value="MediCore Hospital"></div><div class="form-group" style="margin-bottom:14px"><label class="form-label">License Number</label><input type="text" class="form-input" value="HSP-2024-8892"></div><div class="form-group" style="margin-bottom:20px"><label class="form-label">Address</label><textarea class="form-input" rows="2">123 Healthcare Blvd, Medical District, NY 10001</textarea></div><button class="btn btn-primary btn-sm">Save Changes</button></div><div class="glass-card"><div class="section-header"><div class="section-title">Security</div></div><div class="form-group" style="margin-bottom:14px"><label class="form-label">Current Password</label><input type="password" class="form-input"></div><div class="form-group" style="margin-bottom:20px"><label class="form-label">New Password</label><input type="password" class="form-input"></div><button class="btn btn-secondary btn-sm">Update Password</button><div class="divider"></div><div class="section-header"><div class="section-title">Data & Privacy</div></div><p style="font-size:13px;color:var(--text-muted);margin-bottom:16px">Manage patient data, exports, and compliance settings.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-secondary btn-sm"><i class="ti ti-download"></i> Export Audit Log</button><button class="btn btn-danger btn-sm" onclick="confirmClearData()"><i class="ti ti-trash"></i> Clear All Patient Data</button></div></div></div></div>
+        </main>
+    </div>
+
+    <!-- Panels & Modals (Alerts, Messages, Patient Report, Staff Profile) -->
+    <div class="panel-overlay" id="panelOverlay" onclick="closePanels()"></div>
+    <div class="alert-panel" id="alertPanel">
+        <div class="msg-panel-header"><div class="section-title">Critical Alerts</div><button class="modal-close" onclick="closePanels()"><i class="ti ti-x"></i></button></div>
+        <div class="msg-panel-body">
+            <div class="alert-item"><div class="activity-dot" style="background:var(--red-dim);color:var(--red);margin-top:0"><i class="ti ti-alert-triangle"></i></div><div><p style="font-size:14px;font-weight:600">ICU Capacity Critical</p><p style="font-size:12px;color:var(--text-muted);margin-top:4px">ICU is at 92% capacity — consider transferring stable patients.</p><span style="font-size:11px;color:var(--text-muted)">2 minutes ago</span></div></div>
+            <div class="alert-item"><div class="activity-dot" style="background:var(--amber-dim);color:var(--amber);margin-top:0"><i class="ti ti-flask"></i></div><div><p style="font-size:14px;font-weight:600">3 Lab Results Overdue</p><p style="font-size:12px;color:var(--text-muted);margin-top:4px">Lab results for patients #489, #502, #518 are past due.</p><span style="font-size:11px;color:var(--text-muted)">18 minutes ago</span></div></div>
+            <div class="alert-item"><div class="activity-dot" style="background:var(--blue-dim);color:var(--blue);margin-top:0"><i class="ti ti-pills"></i></div><div><p style="font-size:14px;font-weight:600">Medication Review Pending</p><p style="font-size:12px;color:var(--text-muted);margin-top:4px">5 patients due for medication review today.</p><span style="font-size:11px;color:var(--text-muted)">1 hour ago</span></div></div>
+            <div class="alert-item"><div class="activity-dot" style="background:var(--red-dim);color:var(--red);margin-top:0"><i class="ti ti-droplet"></i></div><div><p style="font-size:14px;font-weight:600">Blood Bank: O- Critical Low</p><p style="font-size:12px;color:var(--text-muted);margin-top:4px">O-negative blood stock is below safe threshold.</p><span style="font-size:11px;color:var(--text-muted)">2 hours ago</span></div></div>
+        </div>
+    </div>
+    <div class="msg-panel" id="msgPanel">
+        <div class="msg-panel-header"><div class="section-title">Messages</div><button class="modal-close" onclick="closePanels()"><i class="ti ti-x"></i></button></div>
+        <div class="msg-panel-body" id="msgList"></div>
+        <div class="msg-compose"><div style="display:flex;gap:8px"><input type="text" id="msgReplyInput" class="form-input" placeholder="Type a reply..."><button class="btn btn-primary btn-sm" onclick="sendReply()"><i class="ti ti-send"></i></button></div></div>
+    </div>
+    <div class="modal-overlay" id="reportModal">
+        <div class="modal modal-lg">
+            <div class="modal-header"><div class="modal-title">Patient Report</div><button class="modal-close" onclick="closeModal('reportModal')"><i class="ti ti-x"></i></button></div>
+            <div class="modal-body">
+                <div class="report-header"><div style="display:flex;align-items:center;gap:16px"><div class="patient-avatar-lg" id="modalAvatar">JD</div><div><h2 id="modalName" style="font-size:22px;font-weight:700">John Doe</h2><p id="modalWardRoom" style="color:var(--text-muted);font-size:14px">Ward · Room —</p><span id="modalStatusPill" class="pill pill-green" style="margin-top:8px">Stable</span></div></div></div>
+                <div class="info-row"><div class="info-block"><label>Patient ID</label><span id="modalId">—</span></div><div class="info-block"><label>Date of Birth</label><span id="mDob">—</span></div><div class="info-block"><label>Gender</label><span id="mGender">—</span></div></div>
+                <div class="info-row"><div class="info-block"><label>Blood Type</label><span id="mBlood">—</span></div><div class="info-block"><label>Patient CNIC</label><span id="mCnic">—</span></div><div class="info-block"><label>Phone</label><span id="mPhone">—</span></div></div>
+                <div class="info-row"><div class="info-block"><label>Insurance</label><span id="mInsurance">—</span></div><div class="info-block"><label>Attending Doctor</label><span id="mDoctor">—</span></div><div class="info-block"><label>Admitted</label><span id="mAdmitted">—</span></div></div>
+                <div class="divider"></div><h3 style="font-size:15px;font-weight:600;margin-bottom:12px">Guardian Information</h3>
+                <div class="info-row"><div class="info-block"><label>Guardian Name</label><span id="mGuardian">—</span></div><div class="info-block"><label>Relationship</label><span id="mGrel">—</span></div><div class="info-block"><label>Guardian CNIC</label><span id="mGcnic">—</span></div></div>
+                <div class="info-row"><div class="info-block"><label>Guardian Phone</label><span id="mGphone">—</span></div><div class="info-block"><label>Guardian Email</label><span id="mGemail">—</span></div><div class="info-block"><label>Guardian Address</label><span id="mGaddress">—</span></div></div>
+                <div class="divider"></div><div class="info-row"><div class="info-block"><label>Reason for Admission</label><span id="mReason">—</span></div><div class="info-block"><label>Medications / Allergies</label><span id="mMeds">—</span></div></div>
+                <div class="divider"></div><h3 style="font-size:15px;font-weight:600;margin-bottom:12px">Vitals</h3>
+                <div class="vitals-grid">
+                    <div class="vital-card"><div class="vital-label">Heart Rate</div><div class="vital-value" style="color:var(--green)">78 <span style="font-size:12px;font-weight:400;color:var(--text-muted)">bpm</span></div><div class="vital-sub">Normal range</div></div>
+                    <div class="vital-card"><div class="vital-label">Blood Pressure</div><div class="vital-value" style="color:var(--amber)">128/84 <span style="font-size:12px;font-weight:400;color:var(--text-muted)">mmHg</span></div><div class="vital-sub">Slightly elevated</div></div>
+                    <div class="vital-card"><div class="vital-label">Temperature</div><div class="vital-value">98.6 <span style="font-size:12px;font-weight:400;color:var(--text-muted)">°F</span></div><div class="vital-sub">Normal</div></div>
+                    <div class="vital-card"><div class="vital-label">Oxygen Sat.</div><div class="vital-value">98% <span style="font-size:12px;font-weight:400;color:var(--text-muted)">SpO₂</span></div><div class="vital-sub">Normal</div></div>
+                </div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-secondary" onclick="closeModal('reportModal')">Close</button><button class="btn btn-danger" id="modalDeleteBtn"><i class="ti ti-trash"></i> Discharge & Delete</button><button class="btn btn-primary"><i class="ti ti-printer"></i> Print Report</button></div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="staffModal">
+        <div class="modal">
+            <div class="modal-header"><div class="modal-title">Staff Profile</div><button class="modal-close" onclick="closeModal('staffModal')"><i class="ti ti-x"></i></button></div>
+            <div class="modal-body" style="text-align:center">
+                <div class="dr-profile-pic" id="staffModalInitials">DR</div>
+                <img id="staffModalImg" src="" style="display:none;width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:3px solid var(--border)">
+                <label class="btn btn-secondary btn-xs" style="margin-bottom:20px;cursor:pointer"><i class="ti ti-camera"></i> Change Photo<input type="file" accept="image/*" style="display:none" onchange="updateStaffPic(this)"></label>
+                <h2 id="staffModalName" style="font-size:20px;font-weight:700;margin-bottom:4px">Staff Name</h2>
+                <p id="staffModalRole" style="color:var(--text-muted);font-size:14px;margin-bottom:8px">Role · Department</p>
+                <div id="staffModalStatus" style="margin-bottom:20px"></div>
+                <div class="info-row" style="text-align:left"><div class="info-block"><label>Degree</label><span id="smDegree">—</span></div><div class="info-block"><label>Specialization</label><span id="smSpec">—</span></div><div class="info-block"><label>Pass-Out Year</label><span id="smPassout">—</span></div></div>
+                <div class="info-row" style="text-align:left"><div class="info-block"><label>Experience</label><span id="smExp">—</span></div><div class="info-block"><label>Cases Handled</label><span id="smCases">—</span></div><div class="info-block"><label>Consultation Fee</label><span id="smFee">—</span></div></div>
+                <div class="info-row" style="text-align:left"><div class="info-block"><label>Phone</label><span id="smPhone">—</span></div><div class="info-block"><label>Email</label><span id="smEmail">—</span></div><div class="info-block"><label>CNIC</label><span id="smCnic">—</span></div></div>
+                <div style="text-align:left;margin-top:16px"><label style="font-size:11px;color:var(--text-muted);text-transform: uppercase;e;letter-spacing:0.5px;display:block;margin-bottom:6px">About / Biography</label><p id="smBio" style="font-size:14px;color:var(--text-secondary);line-height:1.5">—</p></div>
+            </div>
+            <div class="modal-footer" style="justify-content:center"><button class="btn btn-secondary" onclick="closeModal('staffModal')">Close</button><button class="btn btn-danger" id="staffDeleteBtn"><i class="ti ti-trash"></i> Remove Staff</button></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
