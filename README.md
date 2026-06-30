@@ -1,22 +1,45 @@
-# MediCore — Hospital Management System
+# MediCore
 
-A single-page hospital management dashboard (patients, appointments, staff, ward grid, reports, etc.)
+MediCore is a hospital management system built to simplify healthcare operations with a modern and responsive interface.
 
-## Structure
+## Live Demo
+[View Live Project](https://itxhadi27-cmd.github.io/MediCore/)
 
-```
-medicore/
-├── index.html       # Main HTML page
-├── css/
-│   └── styles.css   # All application styles (dark + light theme)
-└── js/
-    └── app.js        # All application logic
-```
+## Overview
+MediCore is designed to help manage patients, staff, appointments, billing, inventory, and hospital operations in one place.
+It focuses on creating a clean and practical experience for healthcare workflows.
 
-## Run locally
+## Features
+- Patient management
+- Staff directory
+- Appointment scheduling
+- Ward and room management
+- Billing section
+- Medication inventory
+- Alerts and notifications
+- Analytics dashboard
+- Authentication screens
 
-Just open `index.html` in a browser, or serve the folder with any static server, e.g.:
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- React
+- Responsive Design
 
-```bash
-npx serve .
-```
+## Screenshots
+Add screenshots of the dashboard, patient pages, billing, and admin panels here.
+
+## Purpose
+This project demonstrates product thinking, dashboard design, and real-world business application development.
+
+## Future Improvements
+- Add backend database support
+- Add user authentication
+- Add role-based access control
+- Add real-time updates
+- Add testing
+
+## Author
+Maqsood Ahmed
