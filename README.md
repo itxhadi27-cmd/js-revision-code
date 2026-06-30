@@ -28,18 +28,10 @@ It focuses on creating a clean and practical experience for healthcare workflows
 - React
 - Responsive Design
 
-## Screenshots
-Add screenshots of the dashboard, patient pages, billing, and admin panels here.
 
 ## Purpose
 This project demonstrates product thinking, dashboard design, and real-world business application development.
 
-## Future Improvements
-- Add backend database support
-- Add user authentication
-- Add role-based access control
-- Add real-time updates
-- Add testing
 
 ## Author
 Maqsood Ahmed
